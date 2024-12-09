@@ -115,7 +115,7 @@ const Footer = () => {
                   <input
                     type="email"
                     placeholder="Enter Email"
-                    className="p-3 mb-2 border md:w-[400px] outline-[#2986fe] rounded-lg"
+                    className="p-3 mb-2 w-[200px]  border md:w-[400px] outline-[#2986fe] rounded-lg"
                   />
                 </li>
                 <li>

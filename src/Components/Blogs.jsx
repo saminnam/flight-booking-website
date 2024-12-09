@@ -15,7 +15,8 @@ const blogPosts = [
     date: "Sept 25, 2023",
     author: "Jane",
     authorImage: "https://randomuser.me/api/portraits/women/2.jpg",
-    image: "https://i.pinimg.com/474x/2c/98/38/2c98388e67211f241d2e2f1c1fd2c971.jpg",
+    image:
+      "https://i.pinimg.com/474x/2c/98/38/2c98388e67211f241d2e2f1c1fd2c971.jpg",
     link: "/tech-blog/post2",
     animation: { type: "zoom-out-up", duration: "2000" },
   },
@@ -25,7 +26,8 @@ const blogPosts = [
     date: "Sept 24, 2023",
     author: "Michael",
     authorImage: "https://randomuser.me/api/portraits/men/4.jpg",
-    image: "https://i.pinimg.com/736x/0f/f0/a7/0ff0a776a4853fefee8720a554262f8f.jpg",
+    image:
+      "https://i.pinimg.com/736x/0f/f0/a7/0ff0a776a4853fefee8720a554262f8f.jpg",
     link: "/tech-blog/post3",
     animation: { type: "zoom-in-up", duration: "2000" },
   },
@@ -50,42 +52,44 @@ const Blogs = () => {
           {blogPosts.map((post) => (
             <article
               key={post.id}
-              className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl duration-300 px-8 py-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
-              data-aos={post.animation.type}
-              data-aos-duration={post.animation.duration}
+              className="relative cursor-pointer group h-[400px] isolate flex flex-col justify-end overflow-hidden rounded-2xl duration-300 px-8 py-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
+              // data-aos={post.animation.type}
+              // data-aos-duration={post.animation.duration}
             >
               <img
                 src={post.image}
                 alt={post.title}
-                className="absolute inset-0 -z-10 h-full w-full object-cover"
+                className="absolute block inset-0 -z-10 h-full w-full object-cover"
               />
-              <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
-              <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
-              <div className="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
-                <time className="mr-8">{post.date}</time>
-                <div className="-ml-4 flex items-center gap-x-4">
-                  <svg
-                    viewBox="0 0 2 2"
-                    className="-ml-0.5 h-0.5 w-0.5 flex-none fill-white/50"
-                  >
-                    <circle cx="1" cy="1" r="1"></circle>
-                  </svg>
-                  <div className="flex gap-x-2.5">
-                    <img
-                      src={post.authorImage}
-                      alt={post.author}
-                      className="h-6 w-6 flex-none rounded-full bg-white/10"
-                    />
-                    {post.author}
+              <div className="absolute bottom-full bg-[#0000004d] left-0 right-0 overflow-hidden w-full h-0 transition-all duration-500 ease-in-out group-hover:bottom-0 group-hover:h-full inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10">
+                <div className="text-white text-lg absolute overflow-hidd bottom-14 w-[300px] left-5 transform">
+                  <div className="flex flex-wrap items-center overflow-hidden text-sm leading-6 text-gray-300">
+                    <time className="mr-8">{post.date}</time>
+                    <div className="-ml-4 flex items-center gap-x-4">
+                      <svg
+                        viewBox="0 0 2 2"
+                        className="-ml-0.5 h-0.5 w-0.5 flex-none fill-white/50"
+                      >
+                        <circle cx="1" cy="1" r="1"></circle>
+                      </svg>
+                      <div className="flex gap-x-2.5">
+                        <img
+                          src={post.authorImage}
+                          alt={post.author}
+                          className="h-6 w-6 flex-none rounded-full bg-white/10"
+                        />
+                        {post.author}
+                      </div>
+                    </div>
                   </div>
+                  <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
+                    <a href={post.link}>
+                      <span className="absolute inset-0"></span>
+                      {post.title}
+                    </a>
+                  </h3>
                 </div>
               </div>
-              <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
-                <a href={post.link}>
-                  <span className="absolute inset-0"></span>
-                  {post.title}
-                </a>
-              </h3>
             </article>
           ))}
         </div>

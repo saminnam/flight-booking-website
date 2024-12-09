@@ -2,6 +2,7 @@ import { useState } from "react";
 import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import { MdFlight } from "react-icons/md";
+import { CgMenuRightAlt } from "react-icons/cg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,7 @@ const Navbar = () => {
       data-aos-duration="2000"
     >
       <nav className="font-inter mx-auto lg:relative lg:top-0">
-        <div className="flex flex-col px-6 py-6 lg:flex-row lg:items-center lg:justify-between lg:px-10 lg:py-4 xl:px-20">
+        <div className="flex flex-col px-6 py-6 lg:flex-row lg:items-center lg:justify-between lg:px-10 lg:py-4">
           <Link to={"/"}>
             <a href="/">
               <img src={logo} alt="" className="w-[250px] h-[50px]" />
@@ -24,15 +25,23 @@ const Navbar = () => {
               isOpen ? "" : "hidden"
             }`}
           >
-            <div className="relative flex flex-col">
-              <a
-                href="#about"
-                className="font-inter group rounded-lg lg:px-6 lg:py-4 lg:font-semibold"
-              >
-                ABOUT
-                <div className="h-0.5 bg-[#2986fe] w-0 transition-all duration-300 group-hover:w-full"></div>
-              </a>
-              {menuOne && (
+            <Link
+              to={"/"}
+              className="font-inter group rounded-lg lg:px-6 lg:py-4 font-semibold active:text-[#2986fe] focus:text-[#2986fe]"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              HOME
+              <div className="h-0.5 bg-[#2986fe] w-0 transition-all duration-300 lg:group-hover:w-full"></div>
+            </Link>
+            <Link
+              to={"/about"}
+              className="font-inter group rounded-lg lg:px-6 lg:py-4 font-semibold active:text-[#2986fe] focus:text-[#2986fe]"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              ABOUT
+              <div className="h-0.5 bg-[#2986fe] w-0 transition-all duration-300 lg:group-hover:w-full"></div>
+            </Link>
+            {/* {menuOne && (
                 <div className="z-50 flex w-full flex-col rounded-lg px-5 py-5 lg:absolute lg:top-20 lg:w-[800px] bg-gray-100 lg:flex-row lg:flex-wrap lg:py-7 xl:w-[950px]">
                   <a
                     className="flex grow flex-col rounded-lg px-5 py-5  lg:basis-60 xl:px-8"
@@ -127,41 +136,30 @@ const Navbar = () => {
                     </p>
                   </a>
                 </div>
-              )}
-            </div>
-            <Link to={"/tour"} className="">
-              <button
-                onClick={() => setMenuOne(!menuOne)}
-                className={`flex flex-row rounded-lg group font-semibold lg:px-6 lg:py-4 lg: lg:hover:text-gray-800 ${
-                  menuOne
-                    ? "text-gray-800"
-                    : "text-black lg:border lg:border-white"
-                }`}
-              >
-                TOUR
-                <svg
-                  className={`w-6 h-6 fill-current transition-transform duration-300 ${
-                    menuOne ? "rotate-180" : "rotate-0"
-                  }`}
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"></path>
-                </svg>
-              </button>
+              )} */}
+            <Link
+              to={"/tour"}
+              className="font-inter group rounded-lg lg:px-6 lg:py-4 font-semibold active:text-[#2986fe] focus:text-[#2986fe]"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              TOUR
+              <div className="h-0.5 bg-[#2986fe] w-0 transition-all duration-300 lg:group-hover:w-full"></div>
             </Link>
             <Link
               to={"/package"}
-              className="font-inter group rounded-lg lg:px-6 font-semibold lg:py-4 lg: lg:hover:text-gray-800"
+              className="font-inter group rounded-lg lg:px-6 font-semibold lg:py-4 lg: lg:hover:text-gray-800 active:text-[#2986fe] focus:text-[#2986fe]"
+              onClick={() => setIsOpen(!isOpen)}
             >
               PACKAGE
-              <div className="h-0.5 bg-[#2986fe] w-0 transition-all duration-300 group-hover:w-full"></div>
+              <div className="h-0.5 bg-[#2986fe] w-0 transition-all duration-300 lg:group-hover:w-full"></div>
             </Link>
             <Link
               to={"/contact"}
-              className="font-inter group lg: rounded-lg pb-8 lg:px-6 font-semibold lg:py-4 lg: lg:hover:text-gray-800"
+              onClick={() => setIsOpen(!isOpen)}
+              className="font-inter group lg: rounded-lg pb-8 lg:px-6 font-semibold lg:py-4 lg: lg:hover:text-gray-800 active:text-[#2986fe] focus:text-[#2986fe]"
             >
               CONTACT
-              <div className="h-0.5 bg-[#2986fe] w-0 transition-all duration-300 group-hover:w-full"></div>
+              <div className="h-0.5 bg-[#2986fe] w-0 transition-all duration-300 lg:group-hover:w-full"></div>
             </Link>
           </div>
           <div
@@ -183,17 +181,7 @@ const Navbar = () => {
               setIsOpen(!isOpen);
             }}
           >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M3.75 12H20.25" stroke="#160042"></path>
-              <path d="M3.75 6H20.25" stroke="#160042"></path>
-              <path d="M3.75 18H20.25" stroke="#160042"></path>
-            </svg>
+            <CgMenuRightAlt className="text-xl mt-3" />
           </button>
         </div>
       </nav>

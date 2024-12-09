@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 
 const Hero = () => {
   return (
-    <section className="bg-hero-pattern relative bg-cover bg-no-repeat rounded-3xl px-10 md:mx-20 mt-28 lg:ps-28 lg:pe-14 lg:py-28 pt-16 h-[600px]">
+    <section className="bg-hero-pattern relative bg-cover bg-no-repeat rounded-3xl px-10 md:mx-20 mt-28 lg:ps-28 lg:py-28 pt-16 h-[600px]">
       <div className="flex flex-col justify-center gap-4 items-start">
         <p
           className="text-xl  font-bold"

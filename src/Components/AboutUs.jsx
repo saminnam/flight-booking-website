@@ -4,6 +4,7 @@ import { FaRegStar } from "react-icons/fa6";
 import { MdSupportAgent } from "react-icons/md";
 import { PiSecurityCamera } from "react-icons/pi";
 import CountUp from "react-countup";
+import "animate.css";
 
 const AboutUs = () => {
   const [isInView, setIsInView] = useState(false);
@@ -38,7 +39,7 @@ const AboutUs = () => {
       id="about"
       className="mt-16 bg-gray-100 px-5 py-16 md:px-10 md:py-20"
     >
-      <div className="mx-auto w-full max-w-7xl ">
+      <div className="mx-auto w-full max-w-7xl">
         <h2
           className="mb-2 text-3xl text-center font-serif font-bold md:text-5xl lg:mb-3"
           data-aos="flip-down"

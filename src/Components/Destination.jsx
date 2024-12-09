@@ -11,9 +11,10 @@ const Destination = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    autoplay: true, 
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 1024,
@@ -44,6 +45,27 @@ const Destination = () => {
     },
     {
       img: img2,
+      country: "USA",
+      rating: 4.9,
+      description: "Experience the Diverse Culture of the USA",
+      icon: <FaStar />,
+    },
+    {
+      img: img3,
+      country: "MALDIVES",
+      rating: 4.1,
+      description: "Relax on the White Sandy Beaches of the Maldives",
+      icon: <FaStarHalfAlt />,
+    },
+    {
+      img: img4,
+      country: "CHICAGO",
+      rating: 5.0,
+      description: "Explore the Architecture and Art of Chicago",
+      icon: <FaStar />,
+    },
+    {
+      img: "https://i.pinimg.com/736x/0f/f0/a7/0ff0a776a4853fefee8720a554262f8f.jpg",
       country: "USA",
       rating: 4.9,
       description: "Experience the Diverse Culture of the USA",
@@ -94,7 +116,7 @@ const Destination = () => {
                 <img
                   src={destination.img}
                   alt={destination.country}
-                  className="h-60 object-cover group-hover:scale-105 transition-transform duration-300 rounded-3xl"
+                  className="h-60 object-cover group-hover:scale-105 group-hover:rotate-3 transition-transform duration-300 rounded-3xl"
                 />
                 <div className="flex flex-col items-start py-4">
                   <div className="flex justify-between items-center w-full">
