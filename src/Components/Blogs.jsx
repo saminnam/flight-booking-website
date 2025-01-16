@@ -1,11 +1,17 @@
+import { IoAirplaneOutline } from "react-icons/io5";
+import blog1 from "../assets/blog1.jpg";
+import blog2 from "../assets/blog2.jpg";
+import blog3 from "../assets/blog3.jpg";
+import author from "../assets/author.jpg"
+
 const blogPosts = [
   {
     id: 1,
     title: "The Future of Artificial Intelligence: Trends and Challenges",
     date: "Oct 11, 2023",
     author: "John",
-    authorImage: "https://randomuser.me/api/portraits/men/2.jpg",
-    image: "https://blog.feedspot.com/wp-content/uploads/2016/12/aviation.jpg",
+    authorImage: author,
+    image: blog1,
     link: "/tech-blog/post1",
     animation: { type: "zoom-in-up", duration: "2000" },
   },
@@ -14,9 +20,8 @@ const blogPosts = [
     title: "The Rise of Blockchain Technology: A Comprehensive Guide",
     date: "Sept 25, 2023",
     author: "Jane",
-    authorImage: "https://randomuser.me/api/portraits/women/2.jpg",
-    image:
-      "https://i.pinimg.com/474x/2c/98/38/2c98388e67211f241d2e2f1c1fd2c971.jpg",
+    authorImage: author,
+    image: blog2,
     link: "/tech-blog/post2",
     animation: { type: "zoom-out-up", duration: "2000" },
   },
@@ -25,9 +30,9 @@ const blogPosts = [
     title: "How Quantum Computing Will Revolutionize Data Security",
     date: "Sept 24, 2023",
     author: "Michael",
-    authorImage: "https://randomuser.me/api/portraits/men/4.jpg",
+    authorImage: author,
     image:
-      "https://i.pinimg.com/736x/0f/f0/a7/0ff0a776a4853fefee8720a554262f8f.jpg",
+    blog3,
     link: "/tech-blog/post3",
     animation: { type: "zoom-in-up", duration: "2000" },
   },
@@ -35,16 +40,19 @@ const blogPosts = [
 
 const Blogs = () => {
   return (
-    <div className="mx-auto w-full px-5 py-16 md:px-10 md:py-20 bg-gray-100">
+    <div className="mx-auto w-full px-5 py-16 md:px-10 md:py-20 bg-[#F4FCFA]">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-8">
-        <h2
-          className="text-3xl font-serif text-center font-bold md:text-4xl lg:text-5xl"
+        <div
+          className="flex items-center justify-center gap-6"
           data-aos="flip-down"
           data-aos-duration="2000"
         >
-          From The Blog
-        </h2>
-        <p className="mb-8 text-center mt-4 text-sm text-gray-500 sm:text-base md:mb-12 lg:mb-16">
+          <h1 className="block text-sm border-b border-[#2986fe] lg:text-lg text-[#2986fe] font-semibold text-primary">
+            From The Blogs
+          </h1>
+          <IoAirplaneOutline className="text-xl text-[#2986fe]" />
+        </div>
+        <p className="mb-8 text-center mt-4 text-gray-500 md:mb-12 lg:mb-16">
           Perfect for hiking enthusiasts and peace seekers, mountain
           destinations offer breathtaking views and tranquility.
         </p>
@@ -53,8 +61,8 @@ const Blogs = () => {
             <article
               key={post.id}
               className="relative cursor-pointer group h-[400px] isolate flex flex-col justify-end overflow-hidden rounded-2xl duration-300 px-8 py-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
-              // data-aos={post.animation.type}
-              // data-aos-duration={post.animation.duration}
+              data-aos={post.animation.type}
+              data-aos-duration={post.animation.duration}
             >
               <img
                 src={post.image}

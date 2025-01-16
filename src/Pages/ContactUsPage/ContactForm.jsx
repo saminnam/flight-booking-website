@@ -9,10 +9,10 @@ const ContactForm = () => {
         type="video/mp4"
         className="absolute -z-10 lg:top-16 rounded-e-lg lg:h-[783px] h-full object-cover"></video>
       <section className="px-10 md:mx-20 lg:ps-28 lg:py-28 pt-16">
-        <div className="flex flex-col bg-black/60 rounded-lg">
+        <div className="flex flex-col bg-blue-50/60 rounded-lg">
           <div className="container flex flex-col flex-1 px-6 py-12 mx-auto">
             <div className="flex-1 lg:flex lg:items-center lg:-mx-6">
-              <div className="text-white lg:w-1/2 lg:mx-6">
+              <div className="lg:w-1/2 lg:mx-6">
                 <h1 className="text-2xl font-semibold capitalize lg:text-3xl">
                   Ultimate design solution
                 </h1>
@@ -29,7 +29,7 @@ const ContactForm = () => {
                 </button>
 
                 <div className="mt-6 md:mt-8">
-                  <h3 className="text-gray-300 ">Follow us</h3>
+                  <h3 className="text-blue-500">Follow us</h3>
 
                   <div className="flex mt-4 -mx-1.5 ">
                     <a
@@ -108,7 +108,7 @@ const ContactForm = () => {
                 </div>
               </div>
 
-              <div className="mt-8 lg:w-1/2 lg:mx-6 bg-[#0000004d] rounded-xl shadow shadow-white">
+              <div className="mt-8 lg:w-1/2 lg:mx-6 bg-[#000] rounded-xl shadow shadow-white">
                 <div className="w-full px-8 py-10 mx-auto overflow-hidden lg:max-w-xl">
                   <h1 className="text-xl font-medium text-gray-700 dark:text-gray-200">
                     Contact form

@@ -6,12 +6,13 @@ import { FaStarHalfAlt, FaStar } from "react-icons/fa";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { IoAirplaneOutline } from "react-icons/io5";
 
 const Destination = () => {
   const settings = {
     dots: true,
     infinite: true,
-    autoplay: true, 
+    autoplay: true,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplaySpeed: 2000,
@@ -90,14 +91,17 @@ const Destination = () => {
   return (
     <section className="mt-16 bg-blue-50">
       <div className="mx-auto w-full px-5 py-16 md:px-24 md:py-20">
-        <h2
-          className="font-serif text-3xl font-bold md:text-5xl"
+        <div
+          className="flex items-center gap-6"
           data-aos="flip-down"
           data-aos-duration="2000"
         >
-          Popular Destinations
-        </h2>
-        <p className="mb-8 mt-4 text-sm text-gray-500 sm:text-base md:mb-12 lg:mb-16">
+          <h1 className="block text-sm border-b border-[#2986fe] lg:text-lg text-[#2986fe] font-semibold text-primary">
+            Popular Destinations
+          </h1>
+          <IoAirplaneOutline className="text-xl text-[#2986fe]" />
+        </div>
+        <p className="mb-8 mt-4 text-gray-500 lg:mb-10">
           Explore top travel destinations for your next vacation or weekend
           getaway.
         </p>

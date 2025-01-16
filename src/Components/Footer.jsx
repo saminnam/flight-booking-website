@@ -121,7 +121,7 @@ const Footer = () => {
                 <li>
                   <Link
                     type="submit"
-                    className="p-3 w-[200px] md:w-[400px] group flex justify-center items-center gap-3 bg-[#2986fe] text-white font-bold rounded-lg"
+                    className="p-3 w-[200px] md:w-[400px] hover:bg-transparent border-[#2986fe] hover:text-[#2986fe] border group flex justify-center items-center gap-3 bg-[#2986fe] text-white font-bold rounded-lg"
                   >
                     <p>Subscribe Us</p>
                     <MdFlight className="text-xl group-hover:rotate-90 transition-all duration-500 rotate-45" />

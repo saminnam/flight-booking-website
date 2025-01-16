@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
+import img1 from "../assets/con1.jpeg";
+import img2 from "../assets/con2.png";
+import img3 from "../assets/con3.png";
+import img4 from "../assets/con4.png";
+import img5 from "../assets/con5.jpeg";
 
 const Network = () => {
-  const logos = [
-    "https://th.bing.com/th/id/OIP.vU8tonpDiw8jwVTVhbebUgAAAA?rs=1&pid=ImgDetMain",
-    "https://hotelgreenghana.com/images/brand-1.png",
-    "https://d3j72de684fey1.cloudfront.net/resized/53d5415421ebb3c31ac95ac0521d19eb560cfebe.PjIwNDh4MjA0OA.png",
-    "https://seeklogo.com/images/Q/qatar-airways-logo-C9EBA80545-seeklogo.com.png",
-    "https://th.bing.com/th/id/OIP.zXPJBz9T6lXVctCSM5gnNgAAAA?rs=1&pid=ImgDetMain",
-  ];
+  const logos = [img1, img2, img3, img4, img5];
   const [currentLogoIndex, setCurrentLogoIndex] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {

@@ -9,11 +9,11 @@ const Navbar = () => {
   const [menuOne, setMenuOne] = useState(false);
   return (
     <section
-      className="fixed top-0 z-50 w-full bg-white max-w-screen-2xl"
+      className="fixed top-0 z-50 w-full bg-white"
       data-aos="flip-right"
       data-aos-duration="2000"
     >
-      <nav className="font-inter mx-auto lg:relative lg:top-0">
+      <nav className="font-inter lg:relative lg:top-0  mx-10">
         <div className="flex flex-col px-6 py-6 lg:flex-row lg:items-center lg:justify-between lg:px-10 lg:py-4">
           <Link to={"/"}>
             <a href="/">
@@ -168,7 +168,7 @@ const Navbar = () => {
             }`}
           >
             <Link
-              to={"/booktrip"}
+              to={"/package"}
               className="font-inter group flex justify-center border-2 items-center gap-2 text-sm rounded-3xl px-6 py-3 text-center hover:bg-transparent hover:text-black border-[#101010] text-white bg-[#101010]"
             >
               <MdFlight className="text-xl group-hover:rotate-90 transition-all duration-500 rotate-45" />
