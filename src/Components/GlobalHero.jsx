@@ -3,7 +3,7 @@ import "animate.css";
 
 const GlobalHero = ({ title }) => {
   return (
-    <section className="bg-common-hero-pattern px-10 md:mx-20 w-full bg-cover bg-no-repeat rounded-3xl my-28 lg:py-16 py-10 h-[580px]">
+    <section className="bg-Global-hero-pattern px-10 md:mx-20 w-full bg-cover bg-no-repeat rounded-3xl my-28 lg:py-16 py-10 h-[580px]">
       <div className="lg:w-[550px] w-full flex flex-col gap-8">
         <h1 className="text-4xl text-center lg:text-6xl font-serif animate__animated animate__lightSpeedInRight">
           {title}
