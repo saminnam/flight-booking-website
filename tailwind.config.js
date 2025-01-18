@@ -10,7 +10,7 @@ export default {
         "Global-hero-pattern": "url('src/assets/global-hero.png')",
         "download-bg-pattern": "url('src/assets/image.jpeg')",
         "status-bg-pattern": "url('src/assets/flight-bg.jpg')",
-        "left-bg-pattern": "url('src/assets/left-bg.jpg')",
+        "left-bg-pattern": "url('src/assets/left-bg.png')",
         "right-bg-pattern": "url('src/assets/right-bg.jpg')",
       },
     },
