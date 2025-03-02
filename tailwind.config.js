@@ -4,14 +4,14 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "hero-pattern": "url('/src/assets/flight-hero1.png')",
-        "card-pattern": "url('/src/assets/card-bg.png)",
-        "footer-pattern": "url('src/assets/footer-bg.png')",
-        "common-hero-pattern": "url('src/assets/common-hero.png')",
-        "download-bg-pattern": "url('src/assets/image.jpeg')",
-        "status-bg-pattern": "url('src/assets/flight-bg.jpg')",
-        "left-bg-pattern": "url('src/assets/left-bg.jpg')",
-        "right-bg-pattern": "url('src/assets/right-bg.jpg')",
+        "hero-pattern": "url('./assets/flight-hero1.png')",
+        "card-pattern": "url('./assets/card-bg.png)",
+        "footer-pattern": "url('./assets/footer-bg.png')",
+        "common-hero-pattern": "url('./assets/common-hero.png')",
+        "download-bg-pattern": "url('./assets/image.jpeg')",
+        "status-bg-pattern": "url('./assets/flight-bg.png')",
+        "left-bg-pattern": "url('./assets/left-bg.png')",
+        "right-bg-pattern": "url('./assets/right-bg.png')",
       },
     },
   },

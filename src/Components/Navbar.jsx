@@ -6,7 +6,7 @@ import { CgMenuRightAlt } from "react-icons/cg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [menuOne, setMenuOne] = useState(false);
+  // const [menuOne, setMenuOne] = useState(false);
   return (
     <section
       className="fixed top-0 z-50 w-full bg-white"
