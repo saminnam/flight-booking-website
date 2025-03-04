@@ -16,4 +16,5 @@ export default {
     },
   },
   plugins: [],
+  homepage: "https://travel-lift.netlify.app/",
 };
