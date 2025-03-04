@@ -25,7 +25,7 @@ const App = () => {
     return null;
   };
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/travel-lift/">
       <Navbar />
       <ScrollToTop />
       <GoTopBtn />
